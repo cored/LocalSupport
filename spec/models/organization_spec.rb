@@ -445,4 +445,11 @@ describe Organization do
     
   end
 
+  describe '#toggle_email_visibility' do 
+    it 'enable or disable email visibility' do 
+      @org1.toggle_email_visibility
+      expect(@org1.public_email?).to be_false
+    end
+  end
+
 end

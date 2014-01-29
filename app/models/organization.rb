@@ -83,6 +83,10 @@ class Organization < ActiveRecord::Base
     "#{self.name}"
   end
 
+  def toggle_email_visibility
+    toggle! :public_email
+  end
+
   #Edit this if CSV 'schema' changes
   #value is the name of a column in csv file
   @@column_mappings = {
